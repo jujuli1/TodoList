@@ -7,6 +7,11 @@
 <input v-model="newTodo" type="text" placeholder="tâches à effectuer" :class="$style.addTask">
 <button  :disabled="newTodo.length === 0">Ajouter</button>
 
+<label :class="$style.mask">
+      <input type="checkbox" v-model="hideCompleted">
+      Masquer les tâches completée
+    </label>
+
 </fieldset>
 
   </form>
@@ -26,10 +31,7 @@
 
       </li>
     </ul>
-    <label :class="$style.mask">
-      <input type="checkbox" v-model="hideCompleted">
-      Masquer les tâches completée
-    </label>
+    
   </div>
 </template>
 
@@ -84,6 +86,8 @@ return sortedTodos
 .completed {
   
   font-size: 35px;
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .addTask {
@@ -99,8 +103,12 @@ return sortedTodos
 }
 
 .mask {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
   display: flex;
   justify-content: end;
+  margin-top: -25px;
+  margin-right: 50px;
 }
 .puce {
   display: flex;
