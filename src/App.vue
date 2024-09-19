@@ -88,6 +88,19 @@ return sortedTodos
   font-size: 35px;
   margin-top: 80px;
   margin-bottom: 20px;
+  opacity: 0;  
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+    font-size: 40px;
+  }
+  to {
+    opacity: 1;
+    font-size: 35px;  
+  }
 }
 
 .addTask {
