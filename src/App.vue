@@ -128,6 +128,8 @@ body {
 .container {
   position: relative;
   top: 50px;
+  left: 150px;
+  margin-bottom: 20px;
 }
 .cup
 {
